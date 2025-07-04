@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.scss">
-    <script type="module" src="./main.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.scss" />
+        <script type="module" src="./main.js"></script>
+        <title>Page Mimic - 01</title>
+    </head>
+
+    <body>
+        <header class="ly-header">
+            <div class="header__logos">
+                <a href="/" class="header__logo1"><img src="" alt="logo1" /></a>
+                <a href="/" class="header__logo2"><img src="" alt="logo2" /></a>
+            </div>
+            <div class="header__nav-wrap">
+                <ul class="header__nav">
+                    <li><a href="/">Top</a></li>
+                    <li><a href="/">News</a></li>
+                    <li><a href="/">Recruit</a></li>
+                </ul>
+                <div class="header__search">
+                    <form action="/search" method="get">
+                        <label for="search-input" class="sr-only">Search</label>
+                        <input id="search-input" type="text" placeholder="Search..." />
+                        <button type="button">
+                            <img src="" alt="search" class="icon" />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <main class="ly-cont">
+            <section class="hero">
+                <h1 class="hero__h1">COLD CHAIN</h1>
+                <p class="hero__subtitle">To greatest cold chain in country.</p>
+                <p class="description">
+                    Temperature-controlled supply chain used to store and transport perishable products like food, vaccines, and medicines.
+                </p>
+            </section>
+            <section class="links">
+                <div class="links__corp-wrap">
+                    <a href="/" class="link"><img src="" alt="corp-logo1" /></a>
+                    <a href="/" class="link"><img src="" alt="corp-logo2" /></a>
+                </div>
+                <button type="button">
+                    Archives<img src="" alt="arrow-right" class="icon" />
+                </button>
+            </section>
+        </main>
+
+        <footer class="ly-footer">
+            <ul class="footer__nav">
+                <li><a href="/">Top</a></li>
+                <li><a href="/">News</a></li>
+                <li><a href="/">Recruit</a></li>
+            </ul>
+            <p class="footer__copy">2025 Transportation Co.,Ltd.</p>
+        </footer>
+
+        <button type="button" class="page-up">
+            <img src="" alt="arrow-up" class="icon" />
+        </button>
+    </body>
 </html>
