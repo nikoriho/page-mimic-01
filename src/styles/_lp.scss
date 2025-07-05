@@ -1,0 +1,70 @@
+@use "./vars" as *;
+
+.hero {
+    position: relative;
+    aspect-ratio: 16/9;
+    width: 100%;
+    background: linear-gradient(312deg, #ed8c50, #27347c, #475180, #3dfec7);
+    background-size: 480% 480%;
+    animation: gradient-animation 32s ease infinite;
+    color: #fff;
+    font-size: clamp(.6rem, 2.4vw, 1.2rem);
+
+    &::before {
+        @include hero-gradient(to bottom);
+
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 12%;
+        width: 100%;
+    }
+
+    &::after {
+        @include hero-gradient(to top);
+
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 32%;
+        width: 100%;
+    }
+
+    &__text-wrap {
+        width: 40%;
+        margin: 0 auto;
+        padding-top: 8%;
+        text-align: center;
+    }    
+
+    &__h1 {
+        font-size: 3.2em;
+        font-style: italic;
+    }
+
+    &__subtitle {
+        font-weight: bold;
+    }
+
+    &__h1, &__subtitle {
+        text-shadow: 2px 2px 3px black;
+    }
+
+    &__desc {
+        margin-top: 3em;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

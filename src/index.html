@@ -10,22 +10,43 @@
 
     <body>
         <header class="ly-header">
-            <div class="header__logos">
-                <a href="/" class="header__logo1"><img src="img/logo-1.svg" alt="logo1" /></a>
-                <a href="/" class="header__logo2"><img src="img/logo-2.svg" alt="logo2" /></a>
-            </div>
-            <div class="header__nav-wrap">
-                <ul class="header__nav">
-                    <li><a href="/">Top</a></li>
-                    <li><a href="/">News</a></li>
-                    <li><a href="/">Recruit</a></li>
-                </ul>
-                <div class="header__search">
-                    <form action="/search" method="get">
+            <div class="header">
+                <div class="header__logo-wrap">
+                    <a href="/" class="header__logo"
+                        ><img src="img/logo-1.svg" alt="logo1"
+                    /></a>
+                    <div class="header__logo-divider"></div>
+                    <a href="/" class="header__logo"
+                        ><img src="img/logo-2.svg" alt="logo2"
+                    /></a>
+                </div>
+                <div class="header__nav-wrap">
+                    <ul class="header__nav">
+                        <li><a href="/">Top</a></li>
+                        <li class="dropdown-btn">
+                            <a href="/">News</a>
+                            <ul class="dropdown">
+                                <li><a href="/">News</a></li>
+                                <li><a href="/">Archives</a></li>
+                                <li><a href="/">Notice</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/">Recruit</a></li>
+                    </ul>
+
+                    <form class="header__search" action="/search" method="get">
                         <label for="search-input" class="sr-only">Search</label>
-                        <input id="search-input" type="text" placeholder="Search..." />
+                        <input
+                            id="search-input"
+                            type="text"
+                            placeholder="Search..."
+                        />
                         <button type="button">
-                            <img src="img/search.svg" alt="search" class="icon" />
+                            <img
+                                src="img/search.svg"
+                                alt="search"
+                                class="icon"
+                            />
                         </button>
                     </form>
                 </div>
@@ -34,34 +55,50 @@
 
         <main class="ly-cont">
             <section class="hero">
-                <h1 class="hero__h1">COLD CHAIN</h1>
-                <p class="hero__subtitle">To be a leading cold chain company in Japan.</p>
-                <p class="description">
-                    Temperature-controlled supply chain used to store and transport perishable products like food, vaccines, and medicines.
-                </p>
+                <div class="hero__text-wrap">
+                    <h1 class="hero__h1">COLD CHAIN</h1>
+                    <p class="hero__subtitle">
+                        Leading cold chain company in Japan.
+                    </p>
+                    <p class="hero__desc">
+                        Temperature-controlled supply chain used to store and
+                        transport products like food and medicines.
+                    </p>
+                </div>
             </section>
+
             <section class="links">
                 <div class="links__corp-wrap">
-                    <a href="/" class="link"><img src="img/logo-1-typography.svg" alt="logo-name-1" /></a>
-                    <a href="/" class="link"><img src="img/logo-2-typography.svg" alt="logo-name-2" /></a>
+                    <a href="/" class="links__link"
+                        ><img src="img/logo-1-typography.svg" alt="logo-name-1"
+                    /></a>
+                    <a href="/" class="links__link"
+                        ><img src="img/logo-2-typography.svg" alt="logo-name-2"
+                    /></a>
                 </div>
-                <button type="button">
-                    Archives<img src="img/arrow-right.svg" alt="arrow-right" class="icon" />
-                </button>
+                <a href="/" class="links__archives">
+                    Archives<img
+                        src="img/arrow-right.svg"
+                        alt="arrow-right"
+                        class="icon"
+                    />
+                </a>
             </section>
         </main>
 
         <footer class="ly-footer">
-            <ul class="footer__nav">
-                <li><a href="/">Top</a></li>
-                <li><a href="/">News</a></li>
-                <li><a href="/">Recruit</a></li>
-            </ul>
-            <p class="footer__copy">2025 Transportation Co.,Ltd.</p>
+            <div class="footer">
+                <ul class="footer__nav">
+                    <li><a href="/">Top</a></li>
+                    <li><a href="/">News</a></li>
+                    <li><a href="/">Recruit</a></li>
+                </ul>
+                <p class="footer__copy">2025 Transportation Co.,Ltd.</p>
+            </div>
         </footer>
 
-        <button type="button" class="page-up">
+        <a href="#" class="page-up">
             <img src="img/arrow-up.svg" alt="arrow-up" class="icon" />
-        </button>
+        </a>
     </body>
 </html>

@@ -7,8 +7,10 @@
 }
 
 html, body {
-  font-family: sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   line-height: 1.5;
+  font-size: 1.1rem;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -23,4 +25,8 @@ ul, ol {
 img {
   max-width: 100%;
   display: block;
+}
+
+.sr-only { 
+  display: none;
 }

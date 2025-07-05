@@ -1,0 +1,27 @@
+@use "./vars" as *;
+
+.dropdown-btn {
+    position: relative;
+
+    &:hover .dropdown {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+.dropdown {
+    pointer-events: none;
+    position: absolute;
+    width: 8em;
+    background: rgb(131 223 240);
+    opacity: 0;
+    transition: opacity 500ms;
+    font-size: 1rem;
+
+    & > li {
+        @include hover-style;
+
+        padding: .2em;
+        cursor: pointer;
+    }
+}

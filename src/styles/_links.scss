@@ -1,0 +1,34 @@
+@use "./vars" as *;
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4em;
+    margin: 4em auto;
+    width: 40%;
+
+    &__corp-wrap {
+        display: flex;
+        gap: 2em
+    }
+
+    &__link {
+        @include hover-style;
+
+        padding: 1.6em 2em;
+        width: 48%;
+        border: 1px solid #000;
+    }
+
+    &__archives {
+        @include hover-style;
+
+        display: flex;
+        justify-content: center;
+        padding: .4em;
+        width: 50%;
+        border: 1px solid #000;
+        border-radius: 4px;
+    }
+}
