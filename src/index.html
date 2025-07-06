@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.scss">
-    <script type="module" src="./main.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.scss" />
+        <script type="module" src="./main.js"></script>
+        <title>Page Mimic - 01</title>
+    </head>
+
+    <body>
+        <header class="ly-header">
+            <div class="header">
+                <div class="header__logo-wrap">
+                    <a href="/" class="header__logo"
+                        ><img src="img/logo-1.svg" alt="logo1"
+                    /></a>
+                    <div class="header__logo-divider"></div>
+                    <a href="/" class="header__logo"
+                        ><img src="img/logo-2.svg" alt="logo2"
+                    /></a>
+                </div>
+                <div class="header__nav-wrap">
+                    <ul class="header__nav">
+                        <li><a href="/">Top</a></li>
+                        <li class="dropdown-btn">
+                            <a href="/">News</a>
+                            <ul class="dropdown">
+                                <li><a href="/">News</a></li>
+                                <li><a href="/">Archives</a></li>
+                                <li><a href="/">Notice</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/">Recruit</a></li>
+                    </ul>
+
+                    <form class="header__search" action="/search" method="get">
+                        <label for="search-input" class="sr-only">Search</label>
+                        <input
+                            id="search-input"
+                            type="text"
+                            placeholder="Search..."
+                        />
+                        <button type="button">
+                            <img
+                                src="img/search.svg"
+                                alt="search"
+                                class="icon"
+                            />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <main class="ly-cont">
+            <section class="hero">
+                <div class="hero__text-wrap">
+                    <h1 class="hero__h1">COLD CHAIN</h1>
+                    <p class="hero__subtitle">
+                        Leading cold chain company in Japan.
+                    </p>
+                    <p class="hero__desc">
+                        Temperature-controlled supply chain used to store and
+                        transport products like food and medicines.
+                    </p>
+                </div>
+            </section>
+
+            <section class="links">
+                <div class="links__corp-wrap">
+                    <a href="/" class="links__link"
+                        ><img src="img/logo-1-typography.svg" alt="logo-name-1"
+                    /></a>
+                    <a href="/" class="links__link"
+                        ><img src="img/logo-2-typography.svg" alt="logo-name-2"
+                    /></a>
+                </div>
+                <a href="/" class="links__archives">
+                    Archives<img
+                        src="img/arrow-right.svg"
+                        alt="arrow-right"
+                        class="icon"
+                    />
+                </a>
+            </section>
+        </main>
+
+        <footer class="ly-footer">
+            <div class="footer">
+                <ul class="footer__nav">
+                    <li><a href="/">Top</a></li>
+                    <li><a href="/">News</a></li>
+                    <li><a href="/">Recruit</a></li>
+                </ul>
+                <p class="footer__copy">2025 Transportation Co.,Ltd.</p>
+            </div>
+        </footer>
+
+        <a href="#" class="page-up">
+            <img src="img/arrow-up.svg" alt="arrow-up" class="icon" />
+        </a>
+    </body>
 </html>

@@ -1,0 +1,30 @@
+@use "./vars" as *;
+
+.ly-footer {
+    background: rgb(240 240 240);
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .8em;
+    height: 160px;
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &__nav {
+        display: flex;
+        gap: 1.6em;
+
+        li {
+            @include hover-style;
+        }
+    }
+
+    &__copy {
+        font-size: .6em;
+    }
+}

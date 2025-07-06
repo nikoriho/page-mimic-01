@@ -1,2 +1,14 @@
-// $bg: #fff;
-// $color: #111;
+$accent-color: rgb(36 36 128);
+
+@mixin hover-style {
+    opacity: 1;
+    transition: opacity 500ms;
+
+    &:hover {
+        opacity: .4;
+    }
+}
+
+@mixin hero-gradient($direction) {
+    background: linear-gradient($direction, #fff, transparent);
+}
