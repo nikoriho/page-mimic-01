@@ -1,3 +1,5 @@
+// Handling scroll up button visibility.
+
 export function initScrollBtn() {
     const scrollBtn = document.querySelector(".scroll-up");
 

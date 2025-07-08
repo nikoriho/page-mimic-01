@@ -13,22 +13,22 @@
             <div class="header">
                 <div class="header__logo-wrap">
                     <a href="/" class="header__logo"
-                        ><img src="img/logo-1.svg" alt="logo1"
+                        ><img src="img/logo-1.svg" alt="company logo 1"
                     /></a>
                     <div class="header__logo-divider"></div>
                     <a href="/" class="header__logo"
-                        ><img src="img/logo-2.svg" alt="logo2"
+                        ><img src="img/logo-2.svg" alt="company logo 2"
                     /></a>
                 </div>
-                <div class="header__nav-wrap">
+                <nav class="header__nav-wrap" aria-label="main navigation">
                     <ul class="header__nav">
                         <li><a href="/">Top</a></li>
-                        <li class="dropdown-btn">
-                            <a href="/">News</a>
-                            <ul class="dropdown">
+                        <li class="dropdown">
+                            <a class="dropdown__link" href="/" aria-haspopup="true" aria-expanded="false">News</a>
+                            <ul class="dropdown__list">
                                 <li><a href="/">News</a></li>
                                 <li><a href="/">Archives</a></li>
-                                <li><a href="/">Notice</a></li>
+                                <li><a href="/">Notices</a></li>
                             </ul>
                         </li>
                         <li><a href="/">Recruit</a></li>
@@ -38,10 +38,11 @@
                         <label for="search-input" class="sr-only">Search</label>
                         <input
                             id="search-input"
+                            name="search-text"
                             type="text"
                             placeholder="Search..."
                         />
-                        <button type="button">
+                        <button type="submit">
                             <img
                                 src="img/search.svg"
                                 alt="search"
@@ -49,12 +50,12 @@
                             />
                         </button>
                     </form>
-                </div>
+                </nav>
             </div>
         </header>
 
         <main class="ly-cont">
-            <section class="hero">
+            <section class="hero" aria-label="company introduction">
                 <div class="hero__text-wrap">
                     <h1 class="hero__h1">COLD CHAIN</h1>
                     <p class="hero__subtitle">
@@ -67,20 +68,21 @@
                 </div>
             </section>
 
-            <section class="links">
+            <section class="links" aria-label="company links">
                 <div class="links__corp-wrap">
                     <a href="/" class="links__link"
-                        ><img src="img/logo-1-typography.svg" alt="logo-name-1"
+                        ><img src="img/logo-1-typography.svg" alt="logo-1-typography"
                     /></a>
                     <a href="/" class="links__link"
-                        ><img src="img/logo-2-typography.svg" alt="logo-name-2"
+                        ><img src="img/logo-2-typography.svg" alt="logo-2-typography"
                     /></a>
                 </div>
                 <a href="/" class="links__archives">
                     Archives<img
                         src="img/arrow-right.svg"
-                        alt="arrow-right"
+                        alt=""
                         class="icon"
+                        aria-hidden="true"
                     />
                 </a>
             </section>
@@ -88,7 +90,7 @@
 
         <footer class="ly-footer">
             <div class="footer">
-                <ul class="footer__nav">
+                <ul class="footer__nav" aria-label="footer navigation">
                     <li><a href="/">Top</a></li>
                     <li><a href="/">News</a></li>
                     <li><a href="/">Recruit</a></li>
@@ -97,8 +99,8 @@
             </div>
         </footer>
 
-        <a href="#" class="scroll-up">
-            <img src="img/arrow-up.svg" alt="arrow-up" class="icon" />
+        <a href="#" class="scroll-up" aria-label="scroll to top">
+            <img src="img/arrow-up.svg" alt="arrow-up" class="icon" aria-hidden="true" />
         </a>
     </body>
 </html>
