@@ -6,6 +6,7 @@
     top: 0;
     background: #fff;
     width: 100%;
+    height: $header-height;
 }
 
 .header {
@@ -26,13 +27,13 @@
         padding: 0 1em;
 
         &-divider {
-            height: 2em;
+            height: 1.6em;
             width: 2px;
             background: $accent-color;
         }
     }
 
-    // nav
+    // Nav
 
     &__nav-wrap {
         display: flex;
@@ -66,7 +67,7 @@
         }
     }
 
-    // search
+    // Search
 
     &__search {
         display: flex;
@@ -78,10 +79,15 @@
         }
 
         input {
+            display: none;
             padding: .5em .3em;
             font-size: .8em;
             outline: none;
             border: none;
+            
+            @include respond(md) {
+                display: block;
+            }
         }
 
         button {

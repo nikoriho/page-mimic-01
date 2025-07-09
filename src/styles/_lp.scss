@@ -3,12 +3,11 @@
 .hero {
     position: relative;
     aspect-ratio: 16/9;
-    width: 100%;
     background: linear-gradient(312deg, #ed8c50, #27347c, #475180, #3dfec7);
     background-size: 480% 480%;
     animation: gradient-animation 32s ease infinite;
     color: #fff;
-    font-size: clamp(.6rem, 2.4vw, 1.2rem);
+    font-size: clamp(.4rem, 2.4vw, 1.2rem);
 
     &::before {
         @include hero-gradient(to bottom);
@@ -31,11 +30,13 @@
     }
 
     &__text-wrap {
-        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 0 auto;
         padding-top: 8%;
         text-align: center;
-    }    
+    }
 
     &__h1 {
         font-size: 3.2em;
@@ -46,12 +47,14 @@
         font-weight: bold;
     }
 
-    &__h1, &__subtitle {
+    &__h1,
+    &__subtitle {
         text-shadow: 2px 2px 3px black;
     }
 
     &__desc {
         margin-top: 3em;
+        width: clamp(16rem, 50vw, 40rem);
     }
 }
 

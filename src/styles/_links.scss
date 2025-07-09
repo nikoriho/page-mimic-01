@@ -5,19 +5,26 @@
     flex-direction: column;
     align-items: center;
     gap: 2.4em;
-    margin: 4em auto;
-    width: 40%;
+    margin: 2em auto;
+    padding: 0 3.2em;
 
     &__corp-wrap {
         display: flex;
-        gap: 2em
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2em;
+
+        @include respond(md) {
+            flex-direction: row;
+            gap: 2em;
+        }
     }
 
     &__link {
         @include hover-style;
 
-        padding: 1.6em 2em;
-        width: 48%;
+        padding: 1.2em 2em;
+        width: 100%;
         border: 1px solid #000;
     }
 
@@ -26,8 +33,7 @@
 
         display: flex;
         justify-content: center;
-        padding: .4em;
-        width: 50%;
+        padding: .4em 2em;
         border: 1px solid #000;
         border-radius: 4px;
     }

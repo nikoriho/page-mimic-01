@@ -10,10 +10,11 @@
     flex-direction: column;
     justify-content: center;
     gap: .8em;
-    height: 160px;
+    height: $footer-height  ;
     font-size: 1rem;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 2em;
 
     &__nav {
         display: flex;

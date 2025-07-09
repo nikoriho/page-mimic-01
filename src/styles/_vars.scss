@@ -1,4 +1,8 @@
+@use "sass:map";
+
 $accent-color: rgb(36 36 128);
+$header-height: 110px;
+$footer-height: 110px;
 
 @mixin hover-style {
     opacity: 1;
@@ -11,4 +15,22 @@ $accent-color: rgb(36 36 128);
 
 @mixin hero-gradient($direction) {
     background: linear-gradient($direction, #fff, transparent);
+}
+
+$breakpoints: (
+    sm: 400px,
+    md: 768px,
+    lg: 1280px
+);
+
+@mixin respond($breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+
+    @if $value {
+        @media (min-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "No value found for #{$breakpoint}";
+    }
 }
