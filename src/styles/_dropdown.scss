@@ -1,27 +1,43 @@
 @use "./vars" as *;
 
-.dropdown-btn {
+.dropdown {
     position: relative;
 
-    &:hover .dropdown {
-        pointer-events: auto;
-        opacity: 1;
+    @media(hover: hover) {
+        &__link:hover,
+        &__link:focus-visible {
+            +.dropdown__list {
+                pointer-events: auto;
+                opacity: 1;
+            }
+        }
     }
-}
 
-.dropdown {
-    pointer-events: none;
-    position: absolute;
-    width: 8em;
-    background: rgb(131 223 240);
-    opacity: 0;
-    transition: opacity 500ms;
-    font-size: 1rem;
+    &__list {
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 8em;
+        background: rgb(131 223 240);
+        opacity: 0;
+        transition: opacity 500ms;
+        font-size: 1rem;
 
-    & > li {
-        @include hover-style;
+        @media(hover: hover) {
+            &:hover,
+            &:has(a:focus-visible) {
+                pointer-events: auto;
+                opacity: 1;
+            }
+        }
 
-        padding: .2em;
-        cursor: pointer;
+
+        &>li {
+            @include hover-style;
+
+            padding: .2em;
+            cursor: pointer;
+        }
     }
 }

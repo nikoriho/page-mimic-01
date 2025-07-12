@@ -1,21 +1,30 @@
-// page-up
-.page-up {
+// scroll-up
+.scroll-up {
     display: flex;
-    aspect-ratio: 1;
     position: fixed;
     bottom: 1.6rem;
     right: 1.6rem;
+    aspect-ratio: 1;
+    padding: 1rem;
     background: #3d3d3d;
-    opacity: .4;
+    opacity: 0;
     transition: opacity 500ms;
     border-radius: 8px;
-    padding: 1rem;
+    pointer-events: none;
 
-    &:hover {
-        opacity: .8;
+    @media(hover: hover) {
+        &:hover,
+        &:focus-visible {
+            opacity: .8;
+        }
     }
 
     img {
-        width: 40px;
+        width: clamp(20px, 4vw, 40px);
+    }
+
+    &--visible {
+        opacity: .4;
+        pointer-events: all;
     }
 }

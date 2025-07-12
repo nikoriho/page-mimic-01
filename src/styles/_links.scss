@@ -4,20 +4,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.4em;
-    margin: 4em auto;
-    width: 40%;
+    gap: clamp(1.2em, 8vw, 2.4em);;
+    margin: 2em auto;
+    padding: 0 3.2em;
 
     &__corp-wrap {
         display: flex;
-        gap: 2em
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(1em, 5vw, 2em);
+
+        @include respond(md) {
+            flex-direction: row;
+        }
     }
 
     &__link {
         @include hover-style;
 
-        padding: 1.6em 2em;
-        width: 48%;
+        display: flex;
+        justify-content: center;
+        padding: clamp(.2em, 5vw, 1.2em) clamp(.2em, 5vw, 2em);
+        width: 100%;
         border: 1px solid #000;
     }
 
@@ -26,8 +34,7 @@
 
         display: flex;
         justify-content: center;
-        padding: .4em;
-        width: 50%;
+        padding: .4em 2em;
         border: 1px solid #000;
         border-radius: 4px;
     }
