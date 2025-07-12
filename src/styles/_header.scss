@@ -45,16 +45,17 @@
     &__nav {
         display: flex;
 
-        > li {
+        >li {
             position: relative;
 
-            > a {
+            >a {
                 @include hover-style;
 
                 display: block;
                 padding: .4em .8em;
 
-                &:hover::after, &:focus-visible::after {
+                &:hover::after,
+                &:focus-visible::after {
                     content: "";
                     position: absolute;
                     bottom: .2em;
@@ -69,25 +70,41 @@
 
     // Search
 
+    &__toggle-search {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
     &__search {
-        display: flex;
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
         height: 1.8em;
         border: 1px solid gray;
+
+        @include respond(md) {
+            display: flex !important;
+            position: static;
+            transform: none;
+        }
 
         &:has(input:focus) {
             outline: auto;
         }
 
         input {
-            display: none;
             padding: .5em .3em;
             font-size: .8em;
             outline: none;
             border: none;
-            
-            @include respond(md) {
-                display: block;
-            }
         }
 
         button {

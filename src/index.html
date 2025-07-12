@@ -24,7 +24,13 @@
                     <ul class="header__nav">
                         <li><a href="/">Top</a></li>
                         <li class="dropdown">
-                            <a class="dropdown__link" href="/" aria-haspopup="true" aria-expanded="false">News</a>
+                            <a
+                                class="dropdown__link"
+                                href="/"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                >News</a
+                            >
                             <ul class="dropdown__list">
                                 <li><a href="/">News</a></li>
                                 <li><a href="/">Archives</a></li>
@@ -33,6 +39,10 @@
                         </li>
                         <li><a href="/">Recruit</a></li>
                     </ul>
+
+                    <button class="header__toggle-search" type="button" aria-expanded="false" aria-controls="search-input">
+                        <img src="img/disp_search.svg" alt="toggle search bar" class="icon" />
+                    </button>
 
                     <form class="header__search" action="/search" method="get">
                         <label for="search-input" class="sr-only">Search</label>
@@ -71,10 +81,14 @@
             <section class="links" aria-label="company links">
                 <div class="links__corp-wrap">
                     <a href="/" class="links__link"
-                        ><img src="img/logo-1-typography.svg" alt="logo-1-typography"
+                        ><img
+                            src="img/logo-1-typography.svg"
+                            alt="logo-1-typography"
                     /></a>
                     <a href="/" class="links__link"
-                        ><img src="img/logo-2-typography.svg" alt="logo-2-typography"
+                        ><img
+                            src="img/logo-2-typography.svg"
+                            alt="logo-2-typography"
                     /></a>
                 </div>
                 <a href="/" class="links__archives">
@@ -100,7 +114,12 @@
         </footer>
 
         <a href="#" class="scroll-up" aria-label="scroll to top">
-            <img src="img/arrow-up.svg" alt="arrow-up" class="icon" aria-hidden="true" />
+            <img
+                src="img/arrow-up.svg"
+                alt="arrow-up"
+                class="icon"
+                aria-hidden="true"
+            />
         </a>
     </body>
 </html>
