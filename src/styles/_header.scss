@@ -35,36 +35,48 @@
 
     // Nav
 
-    &__nav-wrap {
+    &__nav {
         display: flex;
         margin: .5em 1em 0;
         justify-content: space-between;
         align-items: center;
     }
 
-    &__nav {
+    &__nav-list {
         display: flex;
 
         >li {
             position: relative;
+        }
+    }
 
-            >a {
-                @include hover-style;
+    &__nav-item {
+        @include hover-style;
 
-                display: block;
-                padding: .4em .8em;
+        display: block;
+        padding: .4em .8em;
 
-                &:hover::after,
-                &:focus-visible::after {
-                    content: "";
-                    position: absolute;
-                    bottom: .2em;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background: $accent-color;
-                }
-            }
+        &:hover::after,
+        &:focus-visible::after {
+            content: "";
+            position: absolute;
+            bottom: .2em;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $accent-color;
+        }
+    }
+
+    &__nav-item--active {
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: .2em;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $accent-color;
         }
     }
 
