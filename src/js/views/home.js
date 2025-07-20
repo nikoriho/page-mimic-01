@@ -25,7 +25,7 @@ export default () =>`
                 alt="logo-2-typography"
         /></a>
     </div>
-    <a href="/" class="links__archives">
+    <a href="/ir/archives" class="links__archives">
         Archives<img
             src="img/arrow-right.svg"
             alt=""

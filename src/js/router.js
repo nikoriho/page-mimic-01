@@ -59,6 +59,7 @@ async function render(path) {
 
     const view = viewModule.default;
     document.getElementById("app").innerHTML = view();
+    window.scrollTo(0, 0);
 }
 
 function navigate(path) {

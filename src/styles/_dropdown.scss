@@ -32,12 +32,11 @@
             }
         }
 
-
         &>li {
-            @include hover-style;
-
             padding: .2em;
             cursor: pointer;
+
+            @include hover-style;
         }
     }
 }

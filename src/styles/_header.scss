@@ -21,10 +21,10 @@
     }
 
     &__logo {
-        @include hover-style;
-
         margin: .4em 0;
         padding: 0 1em;
+
+        @include hover-style;
 
         &-divider {
             height: 1.6em;
@@ -51,10 +51,10 @@
     }
 
     &__nav-item {
-        @include hover-style;
-
         display: block;
         padding: .4em .8em;
+
+        @include hover-style;
 
         &:hover::after,
         &:focus-visible::after {
@@ -82,11 +82,14 @@
 
     // Search
 
-    &__toggle-search {
+    &__toggle-search {        
         display: block;
+        padding: .4em;
         background: transparent;
         border: none;
         cursor: pointer;
+
+        @include hover-style;
 
         @include respond(md) {
             display: none;
