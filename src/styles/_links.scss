@@ -20,22 +20,22 @@
     }
 
     &__link {
-        @include hover-style;
-
         display: flex;
         justify-content: center;
         padding: clamp(.2em, 5vw, 1.2em) clamp(.2em, 5vw, 2em);
         width: 100%;
         border: 1px solid #000;
+
+        @include hover-style;
     }
 
     &__archives {
-        @include hover-style;
-
         display: flex;
         justify-content: center;
         padding: .4em 2em;
         border: 1px solid #000;
         border-radius: 4px;
+
+        @include hover-style;
     }
 }

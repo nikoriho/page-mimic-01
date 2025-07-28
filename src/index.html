@@ -20,28 +20,52 @@
                         ><img src="img/logo-2.svg" alt="company logo 2"
                     /></a>
                 </div>
-                <nav class="header__nav-wrap" aria-label="main navigation">
-                    <ul class="header__nav">
-                        <li><a href="/">Top</a></li>
+                <nav class="header__nav" aria-label="main navigation">
+                    <ul class="header__nav-list">
+                        <li>
+                            <a
+                                class="header__nav-item header__nav-item--active"
+                                href="/"
+                                data-nav-link
+                                >Top</a
+                            >
+                        </li>
                         <li class="dropdown">
                             <a
-                                class="dropdown__link"
-                                href="/"
+                                class="dropdown__link header__nav-item"
+                                href="/ir"
                                 aria-haspopup="true"
                                 aria-expanded="false"
+                                data-nav-link
                                 >News</a
                             >
                             <ul class="dropdown__list">
-                                <li><a href="/">News</a></li>
-                                <li><a href="/">Archives</a></li>
-                                <li><a href="/">Notices</a></li>
+                                <li><a href="/ir/news">News</a></li>
+                                <li><a href="/ir/archives">Archives</a></li>
+                                <li><a href="/ir/notices">Notices</a></li>
                             </ul>
                         </li>
-                        <li><a href="/">Recruit</a></li>
+                        <li>
+                            <a
+                                class="header__nav-item"
+                                href="/recruit"
+                                data-nav-link
+                                >Recruit</a
+                            >
+                        </li>
                     </ul>
 
-                    <button class="header__toggle-search" type="button" aria-expanded="false" aria-controls="search-input">
-                        <img src="img/disp_search.svg" alt="toggle search bar" class="icon" />
+                    <button
+                        class="header__toggle-search"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="search-input"
+                    >
+                        <img
+                            src="img/disp_search.svg"
+                            alt="toggle search bar"
+                            class="icon"
+                        />
                     </button>
 
                     <form class="header__search" action="/search" method="get">
@@ -64,50 +88,14 @@
             </div>
         </header>
 
-        <main class="ly-cont">
-            <section class="hero" aria-label="company introduction">
-                <div class="hero__text-wrap">
-                    <h1 class="hero__h1">COLD CHAIN</h1>
-                    <p class="hero__subtitle">
-                        Leading cold chain company in Japan.
-                    </p>
-                    <p class="hero__desc">
-                        Temperature-controlled supply chain used to store and
-                        transport products like food and medicines.
-                    </p>
-                </div>
-            </section>
-
-            <section class="links" aria-label="company links">
-                <div class="links__corp-wrap">
-                    <a href="/" class="links__link"
-                        ><img
-                            src="img/logo-1-typography.svg"
-                            alt="logo-1-typography"
-                    /></a>
-                    <a href="/" class="links__link"
-                        ><img
-                            src="img/logo-2-typography.svg"
-                            alt="logo-2-typography"
-                    /></a>
-                </div>
-                <a href="/" class="links__archives">
-                    Archives<img
-                        src="img/arrow-right.svg"
-                        alt=""
-                        class="icon"
-                        aria-hidden="true"
-                    />
-                </a>
-            </section>
-        </main>
+        <main class="ly-cont" id="app"></main>
 
         <footer class="ly-footer">
             <div class="footer">
                 <ul class="footer__nav" aria-label="footer navigation">
                     <li><a href="/">Top</a></li>
-                    <li><a href="/">News</a></li>
-                    <li><a href="/">Recruit</a></li>
+                    <li><a href="/ir">News</a></li>
+                    <li><a href="/recruit">Recruit</a></li>
                 </ul>
                 <p class="footer__copy">2025 Transportation Co.,Ltd.</p>
             </div>
